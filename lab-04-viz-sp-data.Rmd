@@ -1,6 +1,7 @@
 ---
 title: "Lab 04 - La Quinta is Spanish for next to Denny's, Pt. 1"
 subtitle: "Visualizing spatial data"
+author: "Yihan Wang (April)"
 output: 
   tufte::tufte_html:
     tufte_variant: "envisioned"
@@ -58,12 +59,14 @@ You can load them by running the following in your Console:
 
 When you do this lab to install `dsbox` you can copy the code below into the console:
 
-```
+
+
+```{r install}
 install.packages("devtools")
 devtools::install_github("tidyverse/dsbox")
 ```
 
-```{r message = FALSE}
+```{r}
 library(tidyverse) 
 library(dsbox) 
 ```
@@ -92,9 +95,19 @@ Along with the name of the state we have the two-letter abbreviation and we have
     (Hint: Use inline R code and functions like `nrow` and `ncol` to compose your answer.) What does each row in the dataset represent?
     What are the variables?
 
+```{r}
+nrow("dennys")
+ncol("dennys")
+```
+
 2.  What are the dimensions of the La Quinta's dataset?
     What does each row in the dataset represent?
     What are the variables?
+
+```{r}
+nrow("laquinta")
+ncol("laquinta")
+```
 
 🧶 ✅ ⬆️ Knit, *commit, and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 

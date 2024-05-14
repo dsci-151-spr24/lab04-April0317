@@ -162,12 +162,13 @@ laquinta %>%
     Here is some starter code to get you going:
 
 ```{r eval = FALSE}
-laquinta %>%
+laquinta <- laquinta%>%
   mutate(country = case_when(
     state %in% state.abb     ~ "United States",
     state %in% c("ON", "BC") ~ "Canada",
     state == "ANT"           ~ "Colombia",
-    state == "AG"            ~ "Maldves"     # fill in the rest
+    state %in% c("AG","QR","CH","NL","VE","PU")            ~ "Mexico",
+    state == "FM"            ~ "Honduras"
   ))
 ```
 
